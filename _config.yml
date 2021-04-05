@@ -1,1 +1,4 @@
 theme: jekyll-theme-hacker
+name: Custom Avatar Generator
+description: Angular Element (Web Component) that creates a random avatar svg image and lets the user customize it with endless possible combinations.
+markdown: GFM
