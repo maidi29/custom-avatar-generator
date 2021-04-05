@@ -1,37 +1,73 @@
-## Welcome to GitHub Pages
+# custom-avatar-generator
+Angular Element (Web Component) that creates a random avatar svg image and lets the user customize it with endless possible combinations.
 
-You can use the [editor on GitHub](https://github.com/maidi29/custom-avatar-generator/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Demo
+Use the generator and see how it will look like at your page or application in this
+⚡
+**[Demo](https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/index.html)**
+⚡
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+See the code and play with the attributes in this 
+⚡
+[JSFiddle](https://jsfiddle.net/maidi/L4so8gyj/)
+⚡
 
-### Markdown
+## Screenshots & Images
+### User Interface
+![Generator UI](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/generator-interface.PNG)
+### Resulting Avatars examples
+![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-3.svg)
+![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-2.svg)
+![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-1.svg)
+![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-4.svg)
+## Usage
+Integrate the package script:
+````html
+<script type="module" src="https://unpkg.com/custom-avatar-generator@1.0.4"></script>
+````
+Add the Angular Element with optional attributes to adapt the avatar generator.
+````html
+<custom-avatar-generator 
+  shape="square" 
+  enable-background="true" 
+  display-download="true" 
+  texts='{"everything":"EVERYTHING","allColors":"All colors","background":"Background","skin":"Skin","hair":"Hair","hairStyle":"Hair Style","accessory":"Accessory","clothes":"Clothes","clothing":"Clothing","print":"Print","download":"Download"}'>
+<custom-avatar-generator 
+````
+On every change the component fires an event with the current svg url, so you can listen to it (and e.g. store it in a variable to save it to your database when the user clicks "save") - or whatever you want to do with the svg.
+```javascript
+const el = document.querySelector('custom-avatar-generator');
+el.addEventListener('svgUrl', (event) => {
+    const mySvgUrl = event.detail;
+    console.log(mySvgUrl);
+    // do whatever you want here
+});
+````
+## Attributes
+All input attributes are optional and have a default. Possible inputs are:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+| name               | possible values                                     | default        | description                                                                                     |
+| -------------      |-------------                                        | ----           | -----                                                                                           |
+| `shape`            | 'sqaure' or 'round'                                 | 'round'        | shape of the avatar image                                                                       |
+| `enable-background`| 'true' or 'false'                                   | 'false'        | Displays a colored background behind the avatar and lets the user customize the color           |
+| `display-download` | 'true' or 'false'                                   | 'false'        | Displays a download button below the controls so the user can save the svg file on their device |
+| `texts`            | JSON with all displayed text string. Structure below| see JSON below | Modify the display texts of the controls                                                        |
+```json
+{
+    "everything": "EVERYTHING",
+    "allColors": "All colors",
+    "background": "Background",
+    "skin": "Skin",
+    "hair": "Hair",
+    "hairStyle": "Hair Style",
+    "accessory": "Accessory",
+    "clothes": "Clothes",
+    "clothing": "Clothing",
+    "print": "Print",
+    "download": "Download"
+}
 ```
+Keep attention that you integrate every property when using the `texts` attribute because it completely overwrites the default texts object.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/maidi29/custom-avatar-generator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Info
+Based on https://avataaars.com/
