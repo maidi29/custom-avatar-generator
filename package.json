@@ -1,7 +1,7 @@
 {
   "name": "custom-avatar-generator",
   "version": "1.0.3",
-  "description": "Angular Element (Web Component) that creates a random avatar svg image and lets the user customize it.",
+  "description": "Angular Element (Web Component) that creates a random avatar svg image and lets the user customize it with endless possible combinations.",
   "license": "MIT",
   "unpkg": "dist/custom-avatar-generator.js",
   "files": [
@@ -66,7 +66,7 @@
   "bugs": {
     "url": "https://github.com/maidi29/custom-avatar-generator/issues"
   },
-  "homepage": "https://github.com/maidi29/custom-avatar-generator",
+  "homepage": "https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/index.html",
   "repository": {
     "type": "git",
     "url": "https://github.com/maidi29/custom-avatar-generator.git"
