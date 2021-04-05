@@ -16,7 +16,7 @@
       <button (click)="goCompletelyRandom()"><div class="random"></div>{{_texts.everything}}</button>
       <button (click)="getRandomColors()"><div class="random"></div>{{_texts.allColors}}</button>
       <ng-container *ngIf="_enableBackground">
-        <h4 class="spacing">{{_texts.background}}</h4>
+        <h4>{{_texts.background}}</h4>
         <input type="color" [(ngModel)]="colors.background"/>
         <button (click)="colors.background = randomizeColor();"><div class="random small"></div></button>
       </ng-container>
@@ -38,8 +38,8 @@
           </div>
           <div>
             <div><span class="iteration">{{_texts.hairStyle}} {{hairType.index}}</span></div>
-            <button (click)="iterateOverHairTypes(false)"><</button>
-            <button (click)="iterateOverHairTypes(true)">></button>
+            <button (click)="iterateOverHairTypes(false)" class="iterate"><</button>
+            <button (click)="iterateOverHairTypes(true)" class="iterate">></button>
             <button (click)="getRandomHairStyle()"><div class="random small"></div></button>
           </div>
         </div>
@@ -61,8 +61,8 @@
           </div>
           <div>
             <div><span class="iteration">{{_texts.clothing}} {{clothing.index}}</span></div>
-            <button (click)="iterateOverClothingTypes(false)"><</button>
-            <button (click)="iterateOverClothingTypes(true)">></button>
+            <button (click)="iterateOverClothingTypes(false)" class="iterate"><</button>
+            <button (click)="iterateOverClothingTypes(true)" class="iterate">></button>
             <button (click)="getRandomClothing()"><div class="random small"></div></button>
           </div>
         </div>
@@ -75,8 +75,8 @@
             </div>
             <div>
               <div><span class="iteration">{{_texts.print}} {{clothingGraphic.index}}</span></div>
-              <button (click)="iterateOverClothingGraphicTypes(false)"><</button>
-              <button (click)="iterateOverClothingGraphicTypes(true)">></button>
+              <button (click)="iterateOverClothingGraphicTypes(false)" class="iterate"><</button>
+              <button (click)="iterateOverClothingGraphicTypes(true)" class="iterate">></button>
               <button (click)="getRandomClothingGraphic()"><div class="random small"></div></button>
             </div>
           </div>
