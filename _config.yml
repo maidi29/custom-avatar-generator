@@ -3,3 +3,6 @@ name: Custom Avatar Generator
 description: Angular Element (Web Component) that creates a random avatar svg image and lets the user customize it with endless possible combinations.
 markdown: GFM
 show_downloads: true
+github:
+  zip_url: https://github.com/maidi29/custom-avatar-generator/zipball/
+  tar_url: https://github.com/maidi29/custom-avatar-generator/tarball/
