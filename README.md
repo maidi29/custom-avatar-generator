@@ -13,7 +13,9 @@ https://jsfiddle.net/maidi/L4so8gyj/
 ⚡
 
 ## Screenshots
+### User Interface
 ![Generator UI](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/generator-interface.PNG)
+### Resulting Avatars examples
 ![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-3.svg)
 ![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-2.svg)
 ![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-1.svg)
@@ -21,7 +23,7 @@ https://jsfiddle.net/maidi/L4so8gyj/
 ## Usage
 Integrate the package script:
 ````html
-<script type="module" src="https://unpkg.com/custom-avatar-generator@1.0.1"></script>
+<script type="module" src="https://unpkg.com/custom-avatar-generator@1.0.2"></script>
 ````
 Add the Angular Element with optional attributes to adapt the avatar generator.
 ````html
@@ -44,12 +46,12 @@ el.addEventListener('svgUrl', (event) => {
 ## Attributes
 All input attributes are optional and have a default. Possible inputs are:
 
-| name        | possible values           | default | description  |
-| ------------- |-------------| ----|-----|
-| `shape`      | 'sqaure' or 'round' | 'round' |shape of the avatar image|
-| `enable-background`     | 'true' or 'false'  |'false'    |   Displays a colored background behind the avatar and lets the user customize the color |
-| `display-download`| 'true' or 'false'     |   'false'|Displays a download button below the controls so the user can save the svg file on their device|
-| `texts`|JSON with all displayed text string. Structure below|see JSON below | Modify the display texts of the controls|
+| name               | possible values                                     | default        | description                                                                                     |
+| -------------      |-------------                                        | ----           | -----                                                                                           |
+| `shape`            | 'sqaure' or 'round'                                 | 'round'        | shape of the avatar image                                                                       |
+| `enable-background`| 'true' or 'false'                                   | 'false'        | Displays a colored background behind the avatar and lets the user customize the color           |
+| `display-download` | 'true' or 'false'                                   | 'false'        | Displays a download button below the controls so the user can save the svg file on their device |
+| `texts`            | JSON with all displayed text string. Structure below| see JSON below | Modify the display texts of the controls                                                        |
 ```json
 {
     "everything": "EVERYTHING",
