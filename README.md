@@ -13,11 +13,15 @@ https://jsfiddle.net/maidi/L4so8gyj/
 ⚡
 
 ## Screenshots
-
+![Generator UI](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/generator-interface.PNG)
+![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-3.svg)
+![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-2.svg)
+![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-1.svg)
+![Example Avatar](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/avatar-example-4.svg)
 ## Usage
 Integrate the package script:
 ````html
-<script type="module" src="https://unpkg.com/custom-avatar-generator@1.0.0"></script>
+<script type="module" src="https://unpkg.com/custom-avatar-generator@1.0.1"></script>
 ````
 Add the Angular Element with optional attributes to adapt the avatar generator.
 ````html
@@ -34,7 +38,7 @@ const el = document.querySelector('custom-avatar-generator');
 el.addEventListener('svgUrl', (event) => {
     const mySvgUrl = event.detail;
     console.log(mySvgUrl);
-  // do whatever you want here
+    // do whatever you want here
 });
 ````
 ## Attributes
