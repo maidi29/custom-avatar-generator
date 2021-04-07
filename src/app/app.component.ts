@@ -142,7 +142,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  public doDownload(format: 'svg' | 'png'): void {
+  public doDownload(format: string): void {
     if (format === 'png') {
       svg.saveSvgAsPng(this.avatar?.nativeElement?.querySelector('svg'), 'avatar.png');
     } else {
