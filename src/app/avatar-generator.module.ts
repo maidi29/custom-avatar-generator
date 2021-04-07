@@ -2,7 +2,7 @@ import {DoBootstrap, Injector, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppComponent } from './app.component';
+import { AvatarGeneratorComponent } from './avatar-generator.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import {FormsModule} from "@angular/forms";
 import {createCustomElement} from "@angular/elements";
@@ -10,16 +10,16 @@ import {createCustomElement} from "@angular/elements";
 @NgModule({
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule],
   providers: [],
-  declarations: [AppComponent, AvatarComponent],
-  exports: [AppComponent, AvatarComponent],
-  entryComponents: [AppComponent],
+  declarations: [AvatarGeneratorComponent, AvatarComponent],
+  exports: [AvatarGeneratorComponent, AvatarComponent],
+  entryComponents: [AvatarGeneratorComponent],
 })
-export class AppModule implements DoBootstrap{
+export class AvatarGeneratorModule implements DoBootstrap{
   constructor(private injector: Injector) {
   }
   ngDoBootstrap() {
     const customElement = createCustomElement(
-      AppComponent, {injector: this.injector}
+      AvatarGeneratorComponent, {injector: this.injector}
     );
     customElements.define('custom-avatar-generator', customElement);
   }

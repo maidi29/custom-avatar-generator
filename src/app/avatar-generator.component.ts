@@ -5,10 +5,10 @@ import * as svg from 'save-svg-as-png';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './avatar-generator.component.html',
+  styleUrls: ['./avatar-generator.component.css']
 })
-export class AppComponent implements OnInit {
+export class AvatarGeneratorComponent implements OnInit {
   @Input() public shape: 'round' | 'square' = 'round';
   @Input() private enableBackground: string;
   @Input() private displayDownload: string;

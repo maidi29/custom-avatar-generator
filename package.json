@@ -1,11 +1,13 @@
 {
   "name": "custom-avatar-generator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Angular Element (Web Component) that creates a random avatar svg image and lets the user customize it with endless possible combinations.",
   "license": "MIT",
   "unpkg": "dist/custom-avatar-generator.js",
   "files": [
-    "dist/"
+    "dist/custom-avatar-generator.js",
+    "src/index.ts",
+    "app/"
   ],
   "keywords": [
     "avatar",
