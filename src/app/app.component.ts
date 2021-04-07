@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, Output, ViewChild, EventEmitter, Input} from '@angular/core';
 import {ClothingGraphicTypes, ClothingTypes, Colors, HairTypes, Texts} from "./model";
 import {randomIntFromInterval, randomizeColor} from "./helper";
+import * as svg from 'save-svg-as-png';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,6 @@ export class AppComponent implements OnInit {
     clothes: 'Clothes',
     clothing: 'Clothing',
     print: 'Print',
-    download: 'Download'
   });
   @Output() private svgUrl = new EventEmitter<string>();
   @ViewChild('avatar', {read: ElementRef}) avatar: ElementRef;
@@ -142,13 +142,17 @@ export class AppComponent implements OnInit {
     }
   }
 
-  public doDownload(): void {
-    const downloadLink = document.createElement("a");
-    downloadLink.href = this.url;
-    downloadLink.download = "avatar.svg";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
+  public doDownload(format: 'svg' | 'png'): void {
+    if (format === 'png') {
+      svg.saveSvgAsPng(this.avatar?.nativeElement?.querySelector('svg'), 'avatar.png');
+    } else {
+      const downloadLink = document.createElement("a");
+      downloadLink.href = this.url;
+      downloadLink.download = "avatar.svg";
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }
   }
 
   public getColorsObject() {

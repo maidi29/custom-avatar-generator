@@ -23,7 +23,7 @@ See the code and play with the attributes in this
 ## Usage
 Integrate the package script:
 ````html
-<script type="module" src="https://unpkg.com/custom-avatar-generator@1.0.4"></script>
+<script type="module" src="https://unpkg.com/custom-avatar-generator@1.0.5"></script>
 ````
 Add the Angular Element with optional attributes to adapt the avatar generator.
 ````html
@@ -31,7 +31,7 @@ Add the Angular Element with optional attributes to adapt the avatar generator.
   shape="square" 
   enable-background="true" 
   display-download="true" 
-  texts='{"everything":"EVERYTHING","allColors":"All colors","background":"Background","skin":"Skin","hair":"Hair","hairStyle":"Hair Style","accessory":"Accessory","clothes":"Clothes","clothing":"Clothing","print":"Print","download":"Download"}'>
+  texts='{"everything":"EVERYTHING","allColors":"All colors","background":"Background","skin":"Skin","hair":"Hair","hairStyle":"Hair Style","accessory":"Accessory","clothes":"Clothes","clothing":"Clothing","print":"Print"}'>
 <custom-avatar-generator 
 ````
 On every change the component fires an event with the current svg url, so you can listen to it (and e.g. store it in a variable to save it to your database when the user clicks "save") - or whatever you want to do with the svg.
@@ -63,8 +63,7 @@ All input attributes are optional and have a default. Possible inputs are:
     "accessory": "Accessory",
     "clothes": "Clothes",
     "clothing": "Clothing",
-    "print": "Print",
-    "download": "Download"
+    "print": "Print"
 }
 ```
 Keep attention that you integrate every property when using the `texts` attribute because it completely overwrites the default texts object.

@@ -143,7 +143,15 @@ button.download {
   margin-left: 2rem;
   font-weight: bold;
 }
+button.download > span, button.download > svg {
+  display: inline-block;
+  vertical-align: middle;
+}
 
+button.download > svg {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
 .avatar {
   position: sticky;
   top: 0;
