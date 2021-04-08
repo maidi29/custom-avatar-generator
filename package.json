@@ -1,13 +1,11 @@
 {
   "name": "custom-avatar-generator",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Angular Element (Web Component) that creates a random avatar svg image and lets the user customize it with endless possible combinations.",
   "license": "MIT",
   "unpkg": "dist/custom-avatar-generator.js",
   "files": [
-    "dist/custom-avatar-generator.js",
-    "index.ts",
-    "src/app/"
+    "dist/custom-avatar-generator.js"
   ],
   "keywords": [
     "avatar",
@@ -21,7 +19,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod && npm run concat",
+    "build": "ng build --prod && npm run concat && ng build avatar-generator-lib --prod",
     "concat": "node ./concat-builds.js",
     "test": "ng test",
     "lint": "ng lint",
@@ -38,8 +36,6 @@
     "@angular/platform-browser-dynamic": "~11.0.1",
     "@webcomponents/custom-elements": "^1.4.2",
     "angular-in-memory-web-api": "~0.11.0",
-    "concat": "^1.0.3",
-    "save-svg-as-png": "^1.4.17",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
@@ -58,6 +54,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",

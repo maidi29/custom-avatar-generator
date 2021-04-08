@@ -7,29 +7,29 @@
                 [colors]="getColorsObject()"
                 [hairType]="hairType.name"
                 [shape]="shape"
-                [enableBackground]="_enableBackground"
+                [enableBackground]="enableBackground"
     >
     </app-avatar>
   </div>
   <div>
     <div class="box">
-      <button (click)="goCompletelyRandom()"><div class="random"></div>{{_texts.everything}}</button>
-      <button (click)="getRandomColors()"><div class="random"></div>{{_texts.allColors}}</button>
-      <ng-container *ngIf="_enableBackground">
-        <h4>{{_texts.background}}</h4>
+      <button (click)="goCompletelyRandom()"><div class="random"></div>{{texts.everything}}</button>
+      <button (click)="getRandomColors()"><div class="random"></div>{{texts.allColors}}</button>
+      <ng-container *ngIf="enableBackground">
+        <h4>{{texts.background}}</h4>
         <input type="color" [(ngModel)]="colors.background"/>
         <button (click)="colors.background = randomizeColor();"><div class="random small"></div></button>
       </ng-container>
     </div>
 
     <div class="box">
-      <h3>{{_texts.skin}}</h3>
+      <h3>{{texts.skin}}</h3>
       <input type="color" [(ngModel)]="colors.skin"/>
       <button (click)="colors.skin = randomizeColor();"><div class="random small"></div></button>
     </div>
 
     <div class="box">
-      <h3>{{_texts.hair}}</h3>
+      <h3>{{texts.hair}}</h3>
       <div>
         <div class="flex">
           <div>
@@ -37,14 +37,14 @@
             <button (click)="colors.hair = randomizeColor();"><div class="random small"></div></button>
           </div>
           <div>
-            <div><span class="iteration">{{_texts.hairStyle}} {{hairType.index}}</span></div>
+            <div><span class="iteration">{{texts.hairStyle}} {{hairType.index}}</span></div>
             <button (click)="iterateOverHairTypes(false)" class="iterate"><</button>
             <button (click)="iterateOverHairTypes(true)" class="iterate">></button>
             <button (click)="getRandomHairStyle()"><div class="random small"></div></button>
           </div>
         </div>
         <div *ngIf="hairType.name === HairTypes.FRIDA || hairType.name === HairTypes.FROANDBAND">
-          <h4>{{_texts.accessory}}</h4>
+          <h4>{{texts.accessory}}</h4>
           <input type="color" [(ngModel)]="colors.accessory"/>
           <button (click)="colors.accessory = randomizeColor();"><div class="random small"></div></button>
         </div>
@@ -52,7 +52,7 @@
     </div>
 
     <div class="box">
-      <h3>{{_texts.clothes}}</h3>
+      <h3>{{texts.clothes}}</h3>
       <div>
         <div class="flex">
           <div>
@@ -60,21 +60,21 @@
             <button (click)="colors.clothes = randomizeColor();"><div class="random small"></div></button>
           </div>
           <div>
-            <div><span class="iteration">{{_texts.clothing}} {{clothing.index}}</span></div>
+            <div><span class="iteration">{{texts.clothing}} {{clothing.index}}</span></div>
             <button (click)="iterateOverClothingTypes(false)" class="iterate"><</button>
             <button (click)="iterateOverClothingTypes(true)" class="iterate">></button>
             <button (click)="getRandomClothing()"><div class="random small"></div></button>
           </div>
         </div>
         <ng-container *ngIf="clothing.name === ClothingTypes.GRAPHIC_SHIRT">
-          <h4>{{_texts.print}}</h4>
+          <h4>{{texts.print}}</h4>
           <div class="flex">
             <div>
               <input type="color" [(ngModel)]="colors.graphic"/>
               <button (click)="colors.graphic = randomizeColor();"><div class="random small"></div></button>
             </div>
             <div>
-              <div><span class="iteration">{{_texts.print}} {{clothingGraphic.index}}</span></div>
+              <div><span class="iteration">{{texts.print}} {{clothingGraphic.index}}</span></div>
               <button (click)="iterateOverClothingGraphicTypes(false)" class="iterate"><</button>
               <button (click)="iterateOverClothingGraphicTypes(true)" class="iterate">></button>
               <button (click)="getRandomClothingGraphic()"><div class="random small"></div></button>
@@ -84,7 +84,7 @@
       </div>
     </div>
 
-    <ng-container *ngIf="_displayDownload">
+    <ng-container *ngIf="displayDownload">
       <button *ngFor="let format of ['png', 'svg']" class="download" (click)="doDownload(format)">
         <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
         <span>.{{format}}</span>
@@ -92,6 +92,3 @@
     </ng-container>
   </div>
 </div>
-
-
-

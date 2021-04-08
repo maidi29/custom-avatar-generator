@@ -1,18 +1,19 @@
-import {Component, ElementRef, OnInit, Output, ViewChild, EventEmitter, Input} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {ClothingGraphicTypes, ClothingTypes, Colors, HairTypes, Texts} from "./model";
 import {randomIntFromInterval, randomizeColor} from "./helper";
 import * as svg from 'save-svg-as-png';
 
 @Component({
-  selector: 'app-root',
+  selector: 'angular-custom-avatar-generator',
   templateUrl: './avatar-generator.component.html',
   styleUrls: ['./avatar-generator.component.css']
+
 })
 export class AvatarGeneratorComponent implements OnInit {
   @Input() public shape: 'round' | 'square' = 'round';
-  @Input() private enableBackground: string;
-  @Input() private displayDownload: string;
-  @Input() private texts: string = JSON.stringify({
+  @Input() public enableBackground: boolean;
+  @Input() public displayDownload: boolean;
+  @Input() public texts: Texts = {
     everything: 'EVERYTHING',
     allColors: 'All colors',
     background: 'Background',
@@ -23,13 +24,9 @@ export class AvatarGeneratorComponent implements OnInit {
     clothes: 'Clothes',
     clothing: 'Clothing',
     print: 'Print',
-  });
+  };
   @Output() private svgUrl = new EventEmitter<string>();
   @ViewChild('avatar', {read: ElementRef}) avatar: ElementRef;
-
-  public _texts: Texts = JSON.parse(this.texts);
-  public _enableBackground: boolean = false;
-  public _displayDownload: boolean = false;
 
   public hairType: {
     name: HairTypes,
@@ -66,9 +63,6 @@ export class AvatarGeneratorComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._texts = JSON.parse(this.texts);
-    this._displayDownload = this.displayDownload === 'true';
-    this._enableBackground = this.enableBackground === 'true';
     this.goCompletelyRandom();
   }
 
@@ -158,6 +152,5 @@ export class AvatarGeneratorComponent implements OnInit {
   public getColorsObject() {
     return {...this.colors};
   }
+
 }
-
-
