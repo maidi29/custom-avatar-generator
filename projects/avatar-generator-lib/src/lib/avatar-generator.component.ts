@@ -4,7 +4,7 @@ import {randomIntFromInterval, randomizeColor} from "./helper";
 import * as svg from 'save-svg-as-png';
 
 @Component({
-  selector: 'angular-custom-avatar-generator',
+  selector: 'ng-custom-avatar-generator',
   templateUrl: './avatar-generator.component.html',
   styleUrls: ['./avatar-generator.component.css']
 
