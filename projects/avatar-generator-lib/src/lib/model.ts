@@ -71,5 +71,4 @@ export interface Texts {
   clothes: string;
   clothing: string;
   print: string;
-  download: string;
 }

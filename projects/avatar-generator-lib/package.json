@@ -1,0 +1,35 @@
+{
+  "name": "ng-custom-avatar-generator",
+  "version": "1.0.0",
+  "description": "Angular Module (Library) that creates a random avatar svg image and lets the user customize it with endless possible combinations.",
+  "peerDependencies": {
+    "@angular/common": "^11.0.9",
+    "@angular/core": "^11.0.9"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0",
+    "save-svg-as-png": "^1.4.17"
+  },
+  "author": "Maidi",
+  "bugs": {
+    "url": "https://github.com/maidi29/custom-avatar-generator/issues"
+  },
+  "homepage": "https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maidi29/custom-avatar-generator.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "avatar",
+    "avatar generator",
+    "avatar customizer",
+    "angular",
+    "unique avatar",
+    "interactive",
+    "angular module",
+    "angular libaray"
+  ]
+}
