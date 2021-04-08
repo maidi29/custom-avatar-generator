@@ -26,7 +26,7 @@ See the code and play with the attributes in this
 ## Usage
 Integrate the package script:
 ````html
-<script type="module" src="https://unpkg.com/custom-avatar-generator@1.1.0"></script>
+<script type="module" src="https://unpkg.com/custom-avatar-generator@1.1.2"></script>
 ````
 Add the Angular Element with optional attributes to adapt the avatar generator.
 ````html
