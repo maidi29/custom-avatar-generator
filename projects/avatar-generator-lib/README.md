@@ -9,11 +9,6 @@ Use the generator and see how it will look like at your page or application in t
 **[Demo](https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/index.html)**
 ⚡
 
-See the code and play with the attributes in this
-⚡
-[JSFiddle](https://jsfiddle.net/maidi/L4so8gyj/)
-⚡
-
 ## Screenshots & Images
 ### User Interface
 ![Generator UI](https://raw.githubusercontent.com/maidi29/custom-avatar-generator/images/images/generator-interface.PNG)
@@ -65,8 +60,8 @@ All input attributes are optional and have a default. Possible inputs are:
 | name               | Type                                     | default        | description                                                                                     |
 | -------------      |-------------                                        | ----           | -----                                                                                           |
 | `shape`            | string ('sqaure' or 'round')                                 | 'round'        | shape of the avatar image                                                                       |
-| `enable-background`| boolean                                  | 'false'        | Displays a colored background behind the avatar and lets the user customize the color           |
-| `display-download` | boolean                                   | 'false'        | Displays a download button below the controls so the user can save the svg file on their device |
+| `enable-background`| boolean                                  | false        | Displays a colored background behind the avatar and lets the user customize the color           |
+| `display-download` | boolean                                   | false        | Displays a download button below the controls so the user can save the svg file on their device |
 | `texts`            | Texts interface, see structure below | see object below | Modify the display texts of the controls                                                        |
 ```
 {
