@@ -4,11 +4,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AvatarGeneratorComponent } from './avatar-generator.component';
 import { AvatarComponent } from './avatar/avatar.component';
-import {FormsModule} from "@angular/forms";
 import {createCustomElement} from "@angular/elements";
 
 @NgModule({
-  imports: [BrowserModule, BrowserAnimationsModule, FormsModule],
+  imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],
   declarations: [AvatarGeneratorComponent, AvatarComponent],
   exports: [AvatarGeneratorComponent, AvatarComponent],
