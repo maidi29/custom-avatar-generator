@@ -1,12 +1,9 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    // TODO(gkalpak): Fix the code and enable this.
-    // "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -20,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "avatar-generator-lib": [
+        "dist/avatar-generator-lib/avatar-generator-lib",
+        "dist/avatar-generator-lib"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
