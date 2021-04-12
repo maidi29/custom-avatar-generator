@@ -1,4 +1,6 @@
 # ng-custom-avatar-generator
+[![npm](https://flat.badgen.net/npm/v/ng-custom-avatar-generator)](https://www.npmjs.com/package/ng-custom-avatar-generator)
+
 Angular Module (Library) that creates a random avatar svg image and lets the user customize it with endless possible combinations.
 
 This package contains an Angular Module to integrate into your Angular Application. If you want to integrate the generator as Web Component then check out this Package: https://www.npmjs.com/package/custom-avatar-generator
