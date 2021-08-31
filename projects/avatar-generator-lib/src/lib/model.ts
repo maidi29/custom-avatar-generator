@@ -51,6 +51,72 @@ export enum ClothingGraphicTypes {
   BAT = 'BAT'
 }
 
+export enum EyebrowTypes {
+  NONE = 'NONE',
+  ANGRY_NATURAL = 'ANGRY_NATURAL',
+  DEFAULT_NATURAL = 'DEFAULT_NATURAL',
+  FLAT_NATURAL = 'FLAT_NATURAL',
+  FROWN_NATURAL = 'FROWN_NATURAL',
+  RAISED_EXCITED_NATURAL = 'RAISED_EXCITED_NATURAL',
+  SAD_CONCERNED_NATURAL = 'SAD_CONCERNED_NATURAL',
+  UNIBROW_NATURAL = 'UNIBROW_NATURAL',
+  UP_DOWN_NATURAL = 'UP_DOWN_NATURAL',
+  RAISED_EXCITED = 'RAISED_EXCITED',
+  ANGRY = 'ANGRY',
+  DEFAULT = 'DEFAULT',
+  SAD_CONCERNED = 'SAD_CONCERNED',
+  UP_DOWN = 'UP_DOWN'
+}
+
+export enum EyeTypes {
+  NONE = 'NONE',
+  SQUINT = 'SQUINT',
+  CLOSED = 'CLOSED',
+  DEFAULT = 'DEFAULT',
+  EYE_ROLL = 'EYE_ROLL',
+  HAPPY = 'HAPPY',
+  HEARTS = 'HEARTS',
+  SIDE = 'SIDE',
+  SURPRISED = 'SURPRISED',
+  WINK = 'WINK',
+  WINK_WACKY = 'WINK_WACKY',
+  X_DIZZY = 'X_DIZZY'
+}
+
+export enum NoseTypes {
+  NONE = 'NONE',
+  DEFAULT = 'DEFAULT'
+}
+
+export enum MouthTypes {
+  NONE = 'NONE',
+  CONCERNED = 'CONCERNED',
+  DEFAULT = 'DEFAULT',
+  DISBELIEF = 'DISBELIEF',
+  GRIMACE = 'GRIMACE',
+  SAD = 'SAD',
+  SCREAM_OPEN = 'SCREAM_OPEN',
+  SERIOUS = 'SERIOUS',
+  SMILE = 'SMILE',
+  TONGUE = 'TONGUE',
+  TWINKLE = 'TWINKLE'
+}
+
+export enum FacialHairTypes {
+  NONE = 'NONE',
+  BEARD_LIGHT = 'BEARD_LIGHT',
+  BEARD_MAJESTIC = 'BEARD_MAJESTIC',
+  BEARD_MEDIUM = 'BEARD_MEDIUM',
+  MOUSTACHE_FANCY = 'MOUSTACHE_FANCY',
+  MOUSTACHE_MAGNUM = 'MOUSTACHE_MAGNUM',
+}
+
+export enum GlassesTypes {
+  NONE = 'NONE',
+  GLASSES = 'GLASSES',
+  GLASSES_ROUND = 'GLASSES_ROUND'
+}
+
 export interface Colors {
   hair?: string;
   skin?: string;
@@ -58,17 +124,29 @@ export interface Colors {
   graphic?: string;
   accessory?: string;
   background?: string;
+  eyebrows?: string;
+  eyes?: string;
+  mouth?: string;
+  facialHair?: string;
+  glasses?: string;
 }
 
 export interface Texts {
   everything: string;
+  face: string;
   allColors: string;
   background: string;
   skin: string;
   hair: string;
   hairStyle: string;
+  eyebrows: string;
+  eyes: string;
+  nose: string;
+  mouth: string;
+  facialHair: string;
   accessory: string;
   clothes: string;
   clothing: string;
   print: string;
+  glasses: string;
 }

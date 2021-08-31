@@ -1,6 +1,6 @@
 {
   "name": "ng-custom-avatar-generator",
-  "version": "1.0.3",
+  "version": "1.1.1",
   "description": "Angular Module (Library) that creates a random avatar svg image and lets the user customize it with endless possible combinations.",
   "licence": "MIT",
   "peerDependencies": {

@@ -6,8 +6,15 @@
                 [clothingGraphic]="clothingGraphic.name"
                 [colors]="getColorsObject()"
                 [hairType]="hairType.name"
+                [eyebrowType]="eyebrowType.name"
+                [eyeType]="eyeType.name"
+                [noseType]="noseType.name"
+                [mouthType]="mouthType.name"
+                [facialHairType]="facialHairType.name"
+                [glassesType]="glassesType.name"
                 [shape]="shape"
                 [enableBackground]="enableBackground"
+                [enableFace]="enableFace"
     >
     </app-avatar>
   </div>
@@ -83,6 +90,92 @@
         </ng-container>
       </div>
     </div>
+
+    <ng-container *ngIf="enableFace">
+      <div class="box">
+        <h3>{{texts.face}}</h3>
+        <div>
+          <h4>{{texts.eyebrows}}</h4>
+          <div class="flex">
+            <div>
+              <input type="color" [(ngModel)]="colors.eyebrows"/>
+              <button (click)="colors.eyebrows = randomizeColor();"><div class="random small"></div></button>
+            </div>
+            <div>
+              <div><span class="iteration">{{texts.eyebrows}} {{eyebrowType.index}}</span></div>
+              <button (click)="iterateOverEyebrowTypes(false)" class="iterate"><</button>
+              <button (click)="iterateOverEyebrowTypes(true)" class="iterate">></button>
+              <button (click)="getRandomEyebrowType()"><div class="random small"></div></button>
+            </div>
+          </div>
+          <h4>{{texts.eyes}}</h4>
+          <div class="flex">
+            <div>
+              <ng-container *ngIf="eyeType.name !== EyeTypes.CLOSED">
+                <input type="color" [(ngModel)]="colors.eyes"/>
+                <button (click)="colors.eyes = randomizeColor();"><div class="random small"></div></button>
+              </ng-container>
+            </div>
+            <div>
+              <div><span class="iteration">{{texts.eyes}} {{eyeType.index}}</span></div>
+              <button (click)="iterateOverEyeTypes(false)" class="iterate"><</button>
+              <button (click)="iterateOverEyeTypes(true)" class="iterate">></button>
+              <button (click)="getRandomEyeType()"><div class="random small"></div></button>
+            </div>
+          </div>
+          <h4>{{texts.nose}}</h4>
+          <div class="flex">
+            <div></div>
+            <div>
+              <div><span class="iteration">{{texts.nose}} {{noseType.index}}</span></div>
+              <button (click)="iterateOverNoseTypes(false)" class="iterate"><</button>
+              <button (click)="iterateOverNoseTypes(true)" class="iterate">></button>
+              <button (click)="getRandomNoseType()"><div class="random small"></div></button>
+            </div>
+          </div>
+          <h4>{{texts.mouth}}</h4>
+          <div class="flex">
+            <div>
+              <input type="color" [(ngModel)]="colors.mouth"/>
+              <button (click)="colors.mouth = randomizeColor();"><div class="random small"></div></button>
+            </div>
+            <div>
+              <div><span class="iteration">{{texts.mouth}} {{mouthType.index}}</span></div>
+              <button (click)="iterateOverMouthTypes(false)" class="iterate"><</button>
+              <button (click)="iterateOverMouthTypes(true)" class="iterate">></button>
+              <button (click)="getRandomMouthType()"><div class="random small"></div></button>
+            </div>
+          </div>
+          <h4>{{texts.facialHair}}</h4>
+          <div class="flex">
+            <div>
+              <input type="color" [(ngModel)]="colors.facialHair"/>
+              <button (click)="colors.facialHair = randomizeColor();"><div class="random small"></div></button>
+            </div>
+            <div>
+              <div><span class="iteration">{{texts.facialHair}} {{facialHairType.index}}</span></div>
+              <button (click)="iterateOverFacialHairTypes(false)" class="iterate"><</button>
+              <button (click)="iterateOverFacialHairTypes(true)" class="iterate">></button>
+              <button (click)="getRandomFacialHairType()"><div class="random small"></div></button>
+            </div>
+          </div>
+          <h4>{{texts.glasses}}</h4>
+          <div class="flex">
+            <div>
+              <input type="color" [(ngModel)]="colors.glasses"/>
+              <button (click)="colors.glasses = randomizeColor();"><div class="random small"></div></button>
+            </div>
+            <div>
+              <div><span class="iteration">{{texts.glasses}} {{glassesType.index}}</span></div>
+              <button (click)="iterateOverGlassesTypes(false)" class="iterate"><</button>
+              <button (click)="iterateOverGlassesTypes(true)" class="iterate">></button>
+              <button (click)="getRandomGlassesType()"><div class="random small"></div></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </ng-container>
 
     <ng-container *ngIf="displayDownload">
       <button *ngFor="let format of ['png', 'svg']" class="download" (click)="doDownload(format)">

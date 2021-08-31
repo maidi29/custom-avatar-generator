@@ -28,7 +28,7 @@ See the code and play with the attributes in this
 ## Usage
 Integrate the package script:
 ````html
-<script type="module" src="https://unpkg.com/custom-avatar-generator@1.1.2"></script>
+<script type="module" src="https://unpkg.com/custom-avatar-generator@1.2.0"></script>
 ````
 Add the Angular Element with optional attributes to adapt the avatar generator.
 ````html
@@ -55,20 +55,27 @@ All input attributes are optional and have a default. Possible inputs are:
 | -------------      |-------------                                        | ----           | -----                                                                                           |
 | `shape`            | 'sqaure' or 'round'                                 | 'round'        | shape of the avatar image                                                                       |
 | `enable-background`| 'true' or 'false'                                   | 'false'        | Displays a colored background behind the avatar and lets the user customize the color           |
+| `enable-face`      | 'true' or 'false'                                   | 'false'        | Displays eyebrows, eyes, nose, mouth, facial hair and glasses and lets the user customize the color and type           |
 | `display-download` | 'true' or 'false'                                   | 'false'        | Displays a download button below the controls so the user can save the svg file on their device |
 | `texts`            | JSON with all displayed text string. Structure below| see JSON below | Modify the display texts of the controls                                                        |
 ```json
 {
     "everything": "EVERYTHING",
     "allColors": "All colors",
-    "background": "Background",
+    "background": "Background", // optional
     "skin": "Skin",
     "hair": "Hair",
     "hairStyle": "Hair Style",
     "accessory": "Accessory",
     "clothes": "Clothes",
     "clothing": "Clothing",
-    "print": "Print"
+    "print": "Print",
+    "eyebrows": "Eyebrows", // optional
+    "eyes": "Eyes", // optional
+    "nose": "Nose", // optional
+    "mouth": "Mouth", // optional
+    "facialHair": "FacialHair", // optional
+    "glasses": "Glasses" // optional
 }
 ```
 Keep attention that you integrate every property when using the `texts` attribute because it completely overwrites the default texts object.

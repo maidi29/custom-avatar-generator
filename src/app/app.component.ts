@@ -9,6 +9,7 @@ import {Texts} from "../../projects/avatar-generator-lib/src/lib/model";
 export class AppComponent implements OnInit{
   @Input() public shape: 'round' | 'square' = 'round';
   @Input() private enableBackground: string;
+  @Input() private enableFace: string;
   @Input() private displayDownload: string;
   @Input() private texts: string = JSON.stringify({
     everything: 'EVERYTHING',
@@ -21,17 +22,25 @@ export class AppComponent implements OnInit{
     clothes: 'Clothes',
     clothing: 'Clothing',
     print: 'Print',
+    face: 'Face Details',
+    eyes: 'Eyes',
+    eyebrows: 'Eyebrows',
+    nose: 'Nose',
+    mouth: 'Mouth',
+    facialHair: 'Facial Hair'
   });
   @Output() private svgUrl = new EventEmitter<string>();
 
   public _texts: Texts = JSON.parse(this.texts);
   public _enableBackground: boolean = false;
+  public _enableFace: boolean = false;
   public _displayDownload: boolean = false;
 
   ngOnInit(): void {
     this._texts = JSON.parse(this.texts);
     this._displayDownload = this.displayDownload === 'true';
     this._enableBackground = this.enableBackground === 'true';
+    this._enableFace = this.enableFace === 'true';
   }
 
   public emitSVG(event: string): void {
