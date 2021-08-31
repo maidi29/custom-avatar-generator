@@ -10,6 +10,8 @@
                 [eyeType]="eyeType.name"
                 [noseType]="noseType.name"
                 [mouthType]="mouthType.name"
+                [facialHairType]="facialHairType.name"
+                [glassesType]="glassesType.name"
                 [shape]="shape"
                 [enableBackground]="enableBackground"
                 [enableFace]="enableFace"
@@ -144,6 +146,33 @@
               <button (click)="getRandomMouthType()"><div class="random small"></div></button>
             </div>
           </div>
+          <h4>{{texts.facialHair}}</h4>
+          <div class="flex">
+            <div>
+              <input type="color" [(ngModel)]="colors.facialHair"/>
+              <button (click)="colors.facialHair = randomizeColor();"><div class="random small"></div></button>
+            </div>
+            <div>
+              <div><span class="iteration">{{texts.facialHair}} {{facialHairType.index}}</span></div>
+              <button (click)="iterateOverFacialHairTypes(false)" class="iterate"><</button>
+              <button (click)="iterateOverFacialHairTypes(true)" class="iterate">></button>
+              <button (click)="getRandomFacialHairType()"><div class="random small"></div></button>
+            </div>
+          </div>
+          <h4>{{texts.glasses}}</h4>
+          <div class="flex">
+            <div>
+              <input type="color" [(ngModel)]="colors.glasses"/>
+              <button (click)="colors.glasses = randomizeColor();"><div class="random small"></div></button>
+            </div>
+            <div>
+              <div><span class="iteration">{{texts.glasses}} {{glassesType.index}}</span></div>
+              <button (click)="iterateOverGlassesTypes(false)" class="iterate"><</button>
+              <button (click)="iterateOverGlassesTypes(true)" class="iterate">></button>
+              <button (click)="getRandomGlassesType()"><div class="random small"></div></button>
+            </div>
+          </div>
+
         </div>
       </div>
     </ng-container>

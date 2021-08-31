@@ -93,7 +93,6 @@ export enum MouthTypes {
   CONCERNED = 'CONCERNED',
   DEFAULT = 'DEFAULT',
   DISBELIEF = 'DISBELIEF',
-  EATING = 'EATING',
   GRIMACE = 'GRIMACE',
   SAD = 'SAD',
   SCREAM_OPEN = 'SCREAM_OPEN',
@@ -101,6 +100,21 @@ export enum MouthTypes {
   SMILE = 'SMILE',
   TONGUE = 'TONGUE',
   TWINKLE = 'TWINKLE'
+}
+
+export enum FacialHairTypes {
+  NONE = 'NONE',
+  BEARD_LIGHT = 'BEARD_LIGHT',
+  BEARD_MAJESTIC = 'BEARD_MAJESTIC',
+  BEARD_MEDIUM = 'BEARD_MEDIUM',
+  MOUSTACHE_FANCY = 'MOUSTACHE_FANCY',
+  MOUSTACHE_MAGNUM = 'MOUSTACHE_MAGNUM',
+}
+
+export enum GlassesTypes {
+  NONE = 'NONE',
+  GLASSES = 'GLASSES',
+  GLASSES_ROUND = 'GLASSES_ROUND'
 }
 
 export interface Colors {
@@ -113,6 +127,8 @@ export interface Colors {
   eyebrows?: string;
   eyes?: string;
   mouth?: string;
+  facialHair?: string;
+  glasses?: string;
 }
 
 export interface Texts {
@@ -127,8 +143,10 @@ export interface Texts {
   eyes: string;
   nose: string;
   mouth: string;
+  facialHair: string;
   accessory: string;
   clothes: string;
   clothing: string;
   print: string;
+  glasses: string;
 }

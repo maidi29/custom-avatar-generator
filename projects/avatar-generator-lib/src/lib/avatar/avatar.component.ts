@@ -1,10 +1,11 @@
 import {Component, Input, OnChanges, Output, SimpleChanges, EventEmitter} from '@angular/core';
 import {
+  GlassesTypes,
   ClothingGraphicTypes,
   ClothingTypes,
   Colors,
   EyebrowTypes,
-  EyeTypes,
+  EyeTypes, FacialHairTypes,
   HairTypes,
   MouthTypes,
   NoseTypes
@@ -22,6 +23,8 @@ export class AvatarComponent implements OnChanges {
   @Input() public eyeType: EyeTypes;
   @Input() public noseType: NoseTypes;
   @Input() public mouthType: MouthTypes;
+  @Input() public facialHairType: FacialHairTypes;
+  @Input() public glassesType: GlassesTypes;
   @Input() public clothing: ClothingTypes;
   @Input() public clothingGraphic: ClothingGraphicTypes;
   @Input() public colors: Colors = {
@@ -34,6 +37,8 @@ export class AvatarComponent implements OnChanges {
     eyebrows: '',
     eyes: '',
     mouth: '',
+    facialHair: '',
+    glasses: ''
   };
   @Input() public enableBackground: boolean = false;
   @Input() public enableFace: boolean = false;
@@ -46,6 +51,8 @@ export class AvatarComponent implements OnChanges {
   public EyeTypes = EyeTypes;
   public NoseTypes = NoseTypes;
   public MouthTypes = MouthTypes;
+  public FacialHairTypes = FacialHairTypes;
+  public GlassesTypes = GlassesTypes;
   public ClothingTypes = ClothingTypes;
   public ClothingGraphicTypes = ClothingGraphicTypes;
 

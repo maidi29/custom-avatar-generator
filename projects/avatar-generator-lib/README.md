@@ -52,6 +52,12 @@ Use the component with desired optional inputs
     clothes: 'Clothes',
     clothing: 'Clothing',
     print: 'Print',
+    eyebrows: 'Eyebrows',
+    eyes: 'Eyes',
+    nose: 'Nose',
+    mouth: 'Mouth',
+    facialHair: 'FacialHair',
+    glasses: 'Glasses'
   }"
   (svgUrl)="console.log('Do whatever you want with the actual svg url:', $event)"
 ></ng-custom-avatar-generator>
@@ -63,6 +69,7 @@ All input attributes are optional and have a default. Possible inputs are:
 | -------------      |-------------                                        | ----           | -----                                                                                           |
 | `shape`            | string ('sqaure' or 'round')                                 | 'round'        | shape of the avatar image                                                                       |
 | `enable-background`| boolean                                  | false        | Displays a colored background behind the avatar and lets the user customize the color           |
+| `enable-face`      | 'true' or 'false'                                   | 'false'        | Displays eyebrows, eyes, nose, mouth, facial hair and glasses and lets the user customize the color and type           |
 | `display-download` | boolean                                   | false        | Displays a download button below the controls so the user can save the svg file on their device |
 | `texts`            | Texts interface, see structure below | see object below | Modify the display texts of the controls                                                        |
 ```
