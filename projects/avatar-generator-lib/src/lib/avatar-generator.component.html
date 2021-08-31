@@ -6,8 +6,10 @@
                 [clothingGraphic]="clothingGraphic.name"
                 [colors]="getColorsObject()"
                 [hairType]="hairType.name"
+                [eyebrowType]="eyebrowType.name"
                 [shape]="shape"
                 [enableBackground]="enableBackground"
+                [enableFace]="enableFace"
     >
     </app-avatar>
   </div>
@@ -83,6 +85,39 @@
         </ng-container>
       </div>
     </div>
+
+    <ng-container *ngIf="enableFace">
+    <div class="box">
+        <h3>{{texts.eyebrows}}</h3>
+        <div class="flex">
+          <div>
+            <input type="color" [(ngModel)]="colors.eyebrows"/>
+            <button (click)="colors.eyebrows = randomizeColor();"><div class="random small"></div></button>
+          </div>
+          <div>
+            <div><span class="iteration">{{texts.eyebrows}} {{eyebrowType.index}}</span></div>
+            <button (click)="iterateOverEyebrowTypes(false)" class="iterate"><</button>
+            <button (click)="iterateOverEyebrowTypes(true)" class="iterate">></button>
+            <button (click)="getRandomEyebrowType()"><div class="random small"></div></button>
+          </div>
+      </div>
+      <div class="box">
+        <h3>Eyes</h3>
+      </div>
+      <div class="box">
+        <h3>Nose</h3>
+      </div>
+      <div class="box">
+        <h3>Mouth</h3>
+      </div>
+      <div class="box">
+        <h3>Facial Hair</h3>
+      </div>
+      <div class="box">
+        <h3>Accessoires</h3>
+      </div>
+      </div>
+    </ng-container>
 
     <ng-container *ngIf="displayDownload">
       <button *ngFor="let format of ['png', 'svg']" class="download" (click)="doDownload(format)">

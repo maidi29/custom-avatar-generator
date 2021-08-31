@@ -51,6 +51,23 @@ export enum ClothingGraphicTypes {
   BAT = 'BAT'
 }
 
+export enum EyebrowTypes {
+  NONE = 'NONE',
+  ANGRY_NATURAL = 'ANGRY_NATURAL',
+  DEFAULT_NATURAL = 'DEFAULT_NATURAL',
+  FLAT_NATURAL = 'FLAT_NATURAL',
+  FROWN_NATURAL = 'FROWN_NATURAL',
+  RAISED_EXCITED_NATURAL = 'RAISED_EXCITED_NATURAL',
+  SAD_CONCERNED_NATURAL = 'SAD_CONCERNED_NATURAL',
+  UNIBROW_NATURAL = 'UNIBROW_NATURAL',
+  UP_DOWN_NATURAL = 'UP_DOWN_NATURAL',
+  RAISED_EXCITED = 'RAISED_EXCITED',
+  ANGRY = 'ANGRY',
+  DEFAULT = 'DEFAULT',
+  SAD_CONCERNED = 'SAD_CONCERNED',
+  UP_DOWN = 'UP_DOWN'
+}
+
 export interface Colors {
   hair?: string;
   skin?: string;
@@ -58,6 +75,10 @@ export interface Colors {
   graphic?: string;
   accessory?: string;
   background?: string;
+  eyebrows?: string;
+  eyes?: string;
+  nose?: string;
+  mouth?: string;
 }
 
 export interface Texts {
@@ -67,6 +88,7 @@ export interface Texts {
   skin: string;
   hair: string;
   hairStyle: string;
+  eyebrows: string;
   accessory: string;
   clothes: string;
   clothing: string;

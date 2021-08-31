@@ -1,5 +1,5 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
-import {ClothingGraphicTypes, ClothingTypes, Colors, HairTypes, Texts} from "./model";
+import {ClothingGraphicTypes, ClothingTypes, Colors, EyebrowTypes, HairTypes, Texts} from "./model";
 import {randomIntFromInterval, randomizeColor} from "./helper";
 import * as svg from 'save-svg-as-png';
 
@@ -12,6 +12,7 @@ import * as svg from 'save-svg-as-png';
 export class AvatarGeneratorComponent implements OnInit {
   @Input() public shape: 'round' | 'square' = 'round';
   @Input() public enableBackground: boolean;
+  @Input() public enableFace: boolean;
   @Input() public displayDownload: boolean;
   @Input() public texts: Texts = {
     everything: 'EVERYTHING',
@@ -20,6 +21,7 @@ export class AvatarGeneratorComponent implements OnInit {
     skin: 'Skin',
     hair: 'Hair',
     hairStyle: 'Hair Style',
+    eyebrows: 'Eyebrows',
     accessory: 'Accessory',
     clothes: 'Clothes',
     clothing: 'Clothing',
@@ -30,6 +32,10 @@ export class AvatarGeneratorComponent implements OnInit {
 
   public hairType: {
     name: HairTypes,
+    index: number
+  };
+  public eyebrowType: {
+    name: EyebrowTypes,
     index: number
   };
   public clothing: {
@@ -46,16 +52,22 @@ export class AvatarGeneratorComponent implements OnInit {
     clothes: '',
     graphic: '',
     accessory: '',
-    background: ''
+    background: '',
+    eyebrows: '',
+    eyes: '',
+    nose: '',
+    mouth: ''
   };
 
   public randomizeColor = randomizeColor;
 
   private hairTypesArray = Object.keys(HairTypes);
+  private eyebrowTypesArray = Object.keys(EyebrowTypes);
   private clothingTypesArray = Object.keys(ClothingTypes);
   private clothingGraphicTypesArray = Object.keys(ClothingGraphicTypes);
 
   public HairTypes = HairTypes;
+  public EyebrowTypes = EyebrowTypes;
   public ClothingTypes = ClothingTypes;
 
   private url: string;
@@ -69,6 +81,7 @@ export class AvatarGeneratorComponent implements OnInit {
   public goCompletelyRandom(): void {
     this.getRandomColors();
     this.getRandomHairStyle();
+    this.getRandomEyebrowType();
     this.getRandomClothing();
     this.getRandomClothingGraphic()
   }
@@ -83,6 +96,10 @@ export class AvatarGeneratorComponent implements OnInit {
     this.hairType = this.getRandomStyle(this.hairTypesArray, HairTypes);
   }
 
+  public getRandomEyebrowType(): void {
+    this.eyebrowType = this.getRandomStyle(this.eyebrowTypesArray, EyebrowTypes);
+  }
+
   public getRandomClothing(): void {
     this.clothing = this.getRandomStyle(this.clothingTypesArray, ClothingTypes);
   }
@@ -95,6 +112,10 @@ export class AvatarGeneratorComponent implements OnInit {
     this.hairType = this.iterateOverOptions(this.hairType, this.hairTypesArray, HairTypes, upwards);
   }
 
+  public iterateOverEyebrowTypes(upwards: boolean): void {
+    this.eyebrowType = this.iterateOverOptions(this.eyebrowType, this.eyebrowTypesArray, EyebrowTypes, upwards);
+  }
+
   public iterateOverClothingTypes(upwards: boolean): void {
     this.clothing = this.iterateOverOptions(this.clothing, this.clothingTypesArray, ClothingTypes, upwards);
   }
@@ -103,7 +124,7 @@ export class AvatarGeneratorComponent implements OnInit {
     this.clothingGraphic = this.iterateOverOptions(this.clothingGraphic, this.clothingGraphicTypesArray, ClothingGraphicTypes, upwards);
   }
 
-  private getRandomStyle(typesArray: Array<any>, enumm: typeof HairTypes | typeof ClothingTypes | typeof ClothingGraphicTypes): { name: any, index: number } {
+  private getRandomStyle(typesArray: Array<any>, enumm: typeof HairTypes | typeof ClothingTypes | typeof ClothingGraphicTypes | typeof EyebrowTypes): { name: any, index: number } {
     const index = randomIntFromInterval(0, typesArray.length - 1);
     return {
       name: enumm[typesArray[index]],
@@ -111,7 +132,7 @@ export class AvatarGeneratorComponent implements OnInit {
     };
   }
 
-  private iterateOverOptions(value: { name: any, index: number }, typesArray: Array<any>, enumName: typeof HairTypes | typeof ClothingTypes | typeof ClothingGraphicTypes, upwards: boolean): { name: any, index: number } {
+  private iterateOverOptions(value: { name: any, index: number }, typesArray: Array<any>, enumName: typeof HairTypes | typeof ClothingTypes | typeof ClothingGraphicTypes | typeof EyebrowTypes, upwards: boolean): { name: any, index: number } {
     let newIndex = upwards ? value.index + 1 : value.index - 1;
     if (newIndex === typesArray.length) {
       newIndex = 0;
