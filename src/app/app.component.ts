@@ -22,6 +22,11 @@ export class AppComponent implements OnInit{
     clothes: 'Clothes',
     clothing: 'Clothing',
     print: 'Print',
+    face: 'Face',
+    eyes: 'Eyes',
+    eyebrows: 'Eyebrows',
+    nose: 'Nose',
+    mouth: 'Mouth'
   });
   @Output() private svgUrl = new EventEmitter<string>();
 

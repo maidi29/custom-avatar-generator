@@ -68,6 +68,41 @@ export enum EyebrowTypes {
   UP_DOWN = 'UP_DOWN'
 }
 
+export enum EyeTypes {
+  NONE = 'NONE',
+  SQUINT = 'SQUINT',
+  CLOSED = 'CLOSED',
+  DEFAULT = 'DEFAULT',
+  EYE_ROLL = 'EYE_ROLL',
+  HAPPY = 'HAPPY',
+  HEARTS = 'HEARTS',
+  SIDE = 'SIDE',
+  SURPRISED = 'SURPRISED',
+  WINK = 'WINK',
+  WINK_WACKY = 'WINK_WACKY',
+  X_DIZZY = 'X_DIZZY'
+}
+
+export enum NoseTypes {
+  NONE = 'NONE',
+  DEFAULT = 'DEFAULT'
+}
+
+export enum MouthTypes {
+  NONE = 'NONE',
+  CONCERNED = 'CONCERNED',
+  DEFAULT = 'DEFAULT',
+  DISBELIEF = 'DISBELIEF',
+  EATING = 'EATING',
+  GRIMACE = 'GRIMACE',
+  SAD = 'SAD',
+  SCREAM_OPEN = 'SCREAM_OPEN',
+  SERIOUS = 'SERIOUS',
+  SMILE = 'SMILE',
+  TONGUE = 'TONGUE',
+  TWINKLE = 'TWINKLE'
+}
+
 export interface Colors {
   hair?: string;
   skin?: string;
@@ -77,18 +112,21 @@ export interface Colors {
   background?: string;
   eyebrows?: string;
   eyes?: string;
-  nose?: string;
   mouth?: string;
 }
 
 export interface Texts {
   everything: string;
+  face: string;
   allColors: string;
   background: string;
   skin: string;
   hair: string;
   hairStyle: string;
   eyebrows: string;
+  eyes: string;
+  nose: string;
+  mouth: string;
   accessory: string;
   clothes: string;
   clothing: string;

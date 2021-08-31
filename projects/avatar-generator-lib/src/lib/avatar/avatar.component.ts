@@ -1,5 +1,14 @@
 import {Component, Input, OnChanges, Output, SimpleChanges, EventEmitter} from '@angular/core';
-import {ClothingGraphicTypes, ClothingTypes, Colors, EyebrowTypes, HairTypes} from "../model";
+import {
+  ClothingGraphicTypes,
+  ClothingTypes,
+  Colors,
+  EyebrowTypes,
+  EyeTypes,
+  HairTypes,
+  MouthTypes,
+  NoseTypes
+} from "../model";
 import {lightenDarkenColor} from "../helper";
 
 
@@ -10,6 +19,9 @@ import {lightenDarkenColor} from "../helper";
 export class AvatarComponent implements OnChanges {
   @Input() public hairType: HairTypes;
   @Input() public eyebrowType: EyebrowTypes;
+  @Input() public eyeType: EyeTypes;
+  @Input() public noseType: NoseTypes;
+  @Input() public mouthType: MouthTypes;
   @Input() public clothing: ClothingTypes;
   @Input() public clothingGraphic: ClothingGraphicTypes;
   @Input() public colors: Colors = {
@@ -22,7 +34,6 @@ export class AvatarComponent implements OnChanges {
     eyebrows: '',
     eyes: '',
     mouth: '',
-    nose: ''
   };
   @Input() public enableBackground: boolean = false;
   @Input() public enableFace: boolean = false;
@@ -32,6 +43,9 @@ export class AvatarComponent implements OnChanges {
 
   public HairTypes = HairTypes;
   public EyebrowTypes = EyebrowTypes;
+  public EyeTypes = EyeTypes;
+  public NoseTypes = NoseTypes;
+  public MouthTypes = MouthTypes;
   public ClothingTypes = ClothingTypes;
   public ClothingGraphicTypes = ClothingGraphicTypes;
 
@@ -41,7 +55,6 @@ export class AvatarComponent implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.eyebrowType);
     this.avatarChanged.emit(true);
   }
 
