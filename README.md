@@ -14,7 +14,7 @@ Use the generator and see how it will look like at your page or application in t
 
 ✨
 **[Demo with Face Details](https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/demo-with-face.html)**
-✨
+✨ (enable-face is true)
 
 See the code and play with the attributes in this 
 👩‍💻
