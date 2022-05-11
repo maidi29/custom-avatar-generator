@@ -9,13 +9,17 @@ https://www.npmjs.com/package/ng-custom-avatar-generator
 ## Demo
 Use the generator and see how it will look like at your page or application in this
 ⚡
-**[Demo](https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/index.html)**
+**[Demo without Face Details](https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/index.html)**
 ⚡
 
+✨
+**[Demo with Face Details](https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/demo-with-face.html)**
+✨
+
 See the code and play with the attributes in this 
-⚡
+👩‍💻
 [JSFiddle](https://jsfiddle.net/maidi/L4so8gyj/)
-⚡
+👩‍💻
 
 ## Screenshots & Images
 ### User Interface
