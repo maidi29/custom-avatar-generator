@@ -10,7 +10,7 @@ https://www.npmjs.com/package/ng-custom-avatar-generator
 Use the generator and see how it will look like at your page or application in this
 ⚡
 **[Demo without Face Details](https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/index.html)**
-⚡
+⚡ (enable-face is false)
 
 ✨
 **[Demo with Face Details](https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/demo-with-face.html)**
