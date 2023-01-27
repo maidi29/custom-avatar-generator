@@ -6,10 +6,12 @@ Angular Module (Library) that creates a random avatar svg image and lets the use
 This package contains an Angular Module to integrate into your Angular Application. If you want to integrate the generator as Web Component then check out this Package: https://www.npmjs.com/package/custom-avatar-generator
 
 ## Demo
-Use the generator, see how it will look like at your application and play around with the attributes in this
-⚡
-**[Stackblitz](https://stackblitz.com/edit/ng-custom-avatar-generator?file=src/app/app.component.html)**
-⚡
+
+👾[**Demo inside a real application**](https://www.gifit2me.com)👾 [(Code)](https://github.com/maidi29/gifit2me)
+
+Use the generator, see how it will look like at your application and play around with the attributes:
+
+⚡[**Stackblitz**](https://stackblitz.com/edit/ng-custom-avatar-generator?file=src/app/app.component.html)⚡
 
 ## Screenshots & Images
 ### User Interface
