@@ -8,6 +8,7 @@ https://www.npmjs.com/package/ng-custom-avatar-generator
 
 ## Demo
 Use the generator and see how it will look like at your page or application: 
+
 👾**[Demo inside a real application](https://www.gifit2me.com)** [(Code)](https://github.com/maidi29/gifit2me)
 
 ⚡**[Demo without Face Details](https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/index.html)**⚡ (enable-face is false)
@@ -15,6 +16,7 @@ Use the generator and see how it will look like at your page or application:
 ✨**[Demo with Face Details](https://htmlpreview.github.io/?https://github.com/maidi29/custom-avatar-generator/demo/demo/demo-with-face.html)**✨ (enable-face is true)
 
 See the code and play with the attributes: 
+
 👩‍💻 [JSFiddle](https://jsfiddle.net/maidi/L4so8gyj/)👩‍💻
 
 ## Screenshots & Images
